@@ -17,6 +17,11 @@ $subnav = wp_list_pages($arguments);
 ?>
 				<div id="sidebarleft_wrapper">
 					<div id="sidebarleft">
+					<?php 
+					if ( dynamic_sidebar('sidebar_left_1') ) : 
+					else : 
+					?>
+					<?php endif; ?>
 
 <?php
 if ($subnav && is_page()) {

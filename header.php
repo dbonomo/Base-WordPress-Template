@@ -15,11 +15,3 @@ wp_head();
 	<body>
 		<div id="main">
 			<div id="wrapper">
-				<div id="header" role="banner">
-					<a id="logo" href="<?php echo get_permalink('home'); ?>" title=""></a>
-					<div id="navigation_box" role="navigation">
-						<ul id="navigation">
-								<?php wp_nav_menu( array( 'theme_location' => 'top' ) ); ?>
-						</ul>
-					</div>
-				</div>

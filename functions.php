@@ -3,13 +3,100 @@
 function register_custom_menus() {
 	register_nav_menus( 
 	array(
-		'top' => 'Top Navigation',
+		'left' => 'Left Navigation',
 		'footer' => 'Footer Navigation'
 	) );
 }
 	
 	add_action( 'init', 'register_custom_menus' );
+
+/**
+ * Register our sidebars and widgetized areas.
+ *
+ */
+function nerdy_widgets_init() {
+	register_sidebar( array(
+		'name' => 'Left Sidebar 1',
+		'id' => 'Left1',
+		'before_widget' => '<div class="LeftSidebar1">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="BoxH2">',
+		'after_title' => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name' => 'Header Box 1',
+		'id' => 'Box1',
+		'before_widget' => '<div class="Box B1">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="BoxH2">',
+		'after_title' => '</h2>',
+	) );
 	
+	register_sidebar( array(
+		'name' => 'Header Box 2',
+		'id' => 'Box2',
+		'before_widget' => '<div class="Box B2">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="BoxH2">',
+		'after_title' => '</h2>',
+	) );
+	
+	register_sidebar( array(
+		'name' => 'Header Box 3',
+		'id' => 'Box3',
+		'before_widget' => '<div class="Box B3">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="BoxH2">',
+		'after_title' => '</h2>',
+	) );
+	
+	register_sidebar( array(
+		'name' => 'Header Box 4',
+		'id' => 'Box4',
+		'before_widget' => '<div class="Box B4">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="BoxH2">',
+		'after_title' => '</h2>',
+	) );
+	
+		register_sidebar( array(
+		'name' => 'Header Box 5',
+		'id' => 'Box5',
+		'before_widget' => '<div class="Box B5">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="BoxH2">',
+		'after_title' => '</h2>',
+	) );
+	
+	register_sidebar( array(
+		'name' => 'Header Box 6',
+		'id' => 'Box6',
+		'before_widget' => '<div class="Box B6">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="BoxH2">',
+		'after_title' => '</h2>',
+	) );
+	
+	register_sidebar( array(
+		'name' => 'Header Box 7',
+		'id' => 'Box7',
+		'before_widget' => '<div class="Box B7">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="BoxH2">',
+		'after_title' => '</h2>',
+	) );
+	
+	register_sidebar( array(
+		'name' => 'Header Box 8',
+		'id' => 'Box8',
+		'before_widget' => '<div class="Box B8">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="BoxH2">',
+		'after_title' => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'nerdy_widgets_init' );
 
 add_theme_support( 'post-thumbnails' ); 
 set_post_thumbnail_size( 960, 400, true ); // 960 pixels wide by 400 pixels tall, crop mode
