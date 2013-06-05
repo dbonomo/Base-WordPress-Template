@@ -10,6 +10,12 @@ function register_custom_menus() {
 	
 	add_action( 'init', 'register_custom_menus' );
 
+/* Removes the version number to annoy hackers */
+function nerdy_remove_version() {
+return '';
+}
+add_filter('the_generator', 'nerdy_remove_version');
+
 /**
  * Register our sidebars and widgetized areas.
  *
